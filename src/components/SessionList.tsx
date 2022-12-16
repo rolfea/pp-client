@@ -5,11 +5,11 @@ export interface SessionListProps {
   sessionName: string;
 }
 
-export function SessionList({ sessionItems, sessionName }: SessionListProps) {
+export function SessionList(sessionList: SessionListProps) {
   return (
     <div className="sessionList">
-      <p>Session List {sessionName} Goes here:</p>
-      {sessionItems.map((si: SessionItemProps) => (
+      <p>Session List {sessionList.sessionName} Goes here:</p>
+      {sessionList.sessionItems.map((si: SessionItemProps) => (
         <SessionItem key={si.key} name={si.name} />
       ))}
     </div>

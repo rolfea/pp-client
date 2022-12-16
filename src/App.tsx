@@ -10,13 +10,12 @@ function App() {
       { key: 3, name: "item 3" },
     ],
     sessionName: "Test Name",
-  };
+  } as any as SessionListProps;
 
   return (
     <div className="App">
       <Session />
-      {/* why  can't I have an interface with a property that is an array of another interface w/o getting this error? */}
-      <SessionList sessionItems={sessionList} />
+      <SessionList {...sessionList} />
     </div>
   );
 }
