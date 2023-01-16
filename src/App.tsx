@@ -1,21 +1,38 @@
-import Session from "./components/Session";
-import { SessionList, SessionListProps } from "./components/SessionList";
-import "./App.css";
+import { Session, SessionProps } from './components/Session';
+import './App.css';
 
 function App() {
-  const sessionList: SessionListProps = {
+  const session: SessionProps = {
+    id: 1,
     sessionItems: [
-      { key: 1, name: "item 1" },
-      { key: 2, name: "item 2" },
-      { key: 3, name: "item 3" },
+      {
+        id: 1,
+        name: '8 On A Hand',
+        bpm: 60,
+        timeInSeconds: 120,
+        notes: 'Full strokes, relaxed',
+      },
+      {
+        id: 2,
+        name: 'Stick Control',
+        bpm: 120,
+        timeInSeconds: 300,
+        notes: 'remeber to breath, count out loud',
+      },
+      {
+        id: 3,
+        name: 'Table of Time',
+        bpm: 52,
+        timeInSeconds: 300,
+        notes: 'full strokes, step and count out loud',
+      },
     ],
-    sessionName: "Test Name",
-  } as any as SessionListProps;
+    name: 'SD Warm Up',
+  };
 
   return (
     <div className="App">
-      <Session />
-      <SessionList {...sessionList} />
+      <Session {...session} />
     </div>
   );
 }
