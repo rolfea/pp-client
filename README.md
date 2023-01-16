@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Practial Pal Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Client for running My Practice Pal (name pending!).
 
-## Available Scripts
+## TODO
 
-In the project directory, you can run:
+### Infra
 
-### `npm start`
+- [] Authentication
+  - AWS Cognito?
+  - Other Options?
+  - Multiple Users, password setting, etc.
+- [] Hosting
+  - Netlify probably
+  - simple CI/CD schtuff, prioritize easy deployment
+- [] Testing
+  - Service type of testing versus component testing
+  - Not really sure pros/cons here, so determine what the biggest bang-for-buck is
+  - E2E testing with Playwright type of tool could be useful too
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### App
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [] Dynamically pull in Practice Sessions
+  - service layer? what's the idiomatic way to do this in react?
+  - stub out call to server
+- [] should be able to switch between sessions seamlessly
+  - two column set up, click other session to load
+  - if current session is active, ask before swapping
+- [] Timer advances through practice session
+  - What's the UX here?
+  - simple "Ready to move on?" prompt with an easy way to extend by set minutes or continue
+  - "Save any new notes?" prompt
+  - Update BPM Prompt
+- [] Built in Metronome
+  - KISS, basic taps for now
+  - easy to adjust up/down
+  - easy to input specific num
+- [] Recording
+  - start simple - no saving off to a DB, just in-memory, short recording
+  - easy to start/stop, listen back
+- []
