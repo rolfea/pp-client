@@ -1,13 +1,17 @@
-export type SessionItemProps = {
-  key: number;
+export interface SessionItemProps {
+  id: number;
   name: string;
-};
+  bpm: number;
+  timeInSeconds: number;
+  notes: string;
+}
 
 export function SessionItem(sessionItem: SessionItemProps) {
   return (
     <div className="sessionItem">
       <p>
-        I am a Session Item {sessionItem.key}: {sessionItem.name}
+        {sessionItem.id}: {sessionItem.name} | {sessionItem.timeInSeconds} |{' '}
+        {sessionItem.bpm} BPM * {sessionItem.notes}
       </p>
     </div>
   );
