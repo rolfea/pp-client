@@ -20,6 +20,7 @@ Client for running My Practice Pal (name pending!).
 
 ### App
 
+- [] UI for adding/deleting new Sessions
 - [] should be able to switch between sessions seamlessly
   - two column set up, click other session to load
   - if current session is active, ask before swapping
