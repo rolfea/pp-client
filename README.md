@@ -20,9 +20,6 @@ Client for running My Practice Pal (name pending!).
 
 ### App
 
-- [] Dynamically pull in Practice Sessions
-  - service layer? what's the idiomatic way to do this in react?
-  - stub out call to server
 - [] should be able to switch between sessions seamlessly
   - two column set up, click other session to load
   - if current session is active, ask before swapping
@@ -38,4 +35,6 @@ Client for running My Practice Pal (name pending!).
 - [] Recording
   - start simple - no saving off to a DB, just in-memory, short recording
   - easy to start/stop, listen back
-- []
+- [x] Dynamically pull in Practice Sessions
+  - service layer? what's the idiomatic way to do this in react?
+  - stub out call to server

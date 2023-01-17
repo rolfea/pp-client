@@ -2,6 +2,7 @@ import { SessionItem, SessionItemProps } from './SessionItem';
 
 export interface SessionProps {
   id: number;
+  userId: number;
   name: string;
   sessionItems: SessionItemProps[];
 }
