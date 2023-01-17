@@ -1,39 +1,23 @@
 import { Session, SessionProps } from './components/Session';
+import sessionApi from './api/sessionApi';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const session: SessionProps = {
-    id: 1,
-    sessionItems: [
-      {
-        id: 1,
-        name: '8 On A Hand',
-        bpm: 60,
-        timeInSeconds: 120,
-        notes: 'Full strokes, relaxed',
-      },
-      {
-        id: 2,
-        name: 'Stick Control',
-        bpm: 120,
-        timeInSeconds: 300,
-        notes: 'remeber to breath, count out loud',
-      },
-      {
-        id: 3,
-        name: 'Table of Time',
-        bpm: 52,
-        timeInSeconds: 300,
-        notes: 'full strokes, step and count out loud',
-      },
-    ],
-    name: 'SD Warm Up',
-  };
+  const [session, setSession] = useState<SessionProps | undefined>(undefined);
 
-  return (
+  useEffect(() => {
+    (async () => {
+      setSession(await sessionApi.getSlow(1));
+    })();
+  }, []);
+
+  return session ? (
     <div className="App">
       <Session {...session} />
     </div>
+  ) : (
+    <div>Loading!</div>
   );
 }
 
