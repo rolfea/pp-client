@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      setSession(await sessionApi.getSlow(1));
+      setSession(await sessionApi.get(1));
     })();
   }, []);
 
